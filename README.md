@@ -31,3 +31,14 @@ Si ha poi l'utente di tipo admin il quale ha funzionalità aggiuntive:
 - Quando si effettua la registrazione l'utente è settato in automatico in modalità "user"
 - Per poter effettuare una prenotazione di una camera è necessario prima aver effettuato il login altimenti è possibile solo visualizzare i dettagli di una camera
 - Nel momento in cui si effettua il login vengono visualizzate le prenotazioni effettuate ed è possibile modificarle o cancellarle
+
+Sono stati realizzati dei Mockup dell'applicazione tramite Balsamiq utili sia come guida per lo sviluppo che per farsi un'idea di come sarà l'interfaccia utente finale. Sono riportati nel seguente pdf: [Mockups.pdf](Mockups.pdf). Scaricandolo è possibile navigare tra le varie viste.
+
+La relazione del progetto è in [report.pdf](report.pdf).
+
+### Screenshot dell'applicazione
+![image](https://user-images.githubusercontent.com/47114787/124766122-ea79a200-df36-11eb-8770-6ac99e66623d.png)
+
+![image](https://user-images.githubusercontent.com/47114787/124766341-1eed5e00-df37-11eb-8402-b0b0355b94f8.png)
+
+
