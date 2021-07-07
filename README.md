@@ -41,5 +41,8 @@ La relazione del progetto è in [report.pdf](report.pdf).
 
 ![Cattura2](https://user-images.githubusercontent.com/47114787/124766931-a4710e00-df37-11eb-9566-e229b13eddc3.JPG)
 
+![Cattura3](https://user-images.githubusercontent.com/47114787/124767516-2bbe8180-df38-11eb-8cf5-c2508b199fff.JPG)
+
+
 
 
