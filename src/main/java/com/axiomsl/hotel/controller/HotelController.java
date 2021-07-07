@@ -51,6 +51,7 @@ public class HotelController {
     private List<Room> rooms;
     private List<Hotel> hotels;
     private Room searchRoom;
+    private Hotel insertHotel;
     private String oldPassword;
 
     private final Long HOTEL_ID = 1L;
@@ -80,6 +81,7 @@ public class HotelController {
         }
         else if(hotels != null){
         	rooms.clear();
+        	insertHotel = searchRoom.getHotel();
         	for(Hotel hotel : hotels) {
         		this.hotel = hotel;
         		searchRoom.setHotel(this.hotel);
@@ -87,7 +89,7 @@ public class HotelController {
         				searchRoom.getNumber(), searchRoom.getType(), searchRoom.getDirection()));
         		//rooms.addAll(roomService.findAllByCriteria(searchRoom.getNumber(), searchRoom.getType(), searchRoom.getDirection()));
         	}
-        	searchRoom.setHotel(null);
+        	searchRoom.setHotel(insertHotel);
         }
         //logger.info("No. of rooms: " + rooms.size());
         setMainAttributes(model);
