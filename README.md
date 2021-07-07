@@ -37,8 +37,9 @@ Sono stati realizzati dei Mockup dell'applicazione tramite Balsamiq utili sia co
 La relazione del progetto è in [report.pdf](report.pdf).
 
 ### Screenshot dell'applicazione
-![image](https://user-images.githubusercontent.com/47114787/124766122-ea79a200-df36-11eb-8770-6ac99e66623d.png)
+![Cattura1](https://user-images.githubusercontent.com/47114787/124766900-9e7b2d00-df37-11eb-939e-af0177f76d90.JPG)
 
-![image](https://user-images.githubusercontent.com/47114787/124766341-1eed5e00-df37-11eb-8402-b0b0355b94f8.png)
+![Cattura2](https://user-images.githubusercontent.com/47114787/124766931-a4710e00-df37-11eb-9566-e229b13eddc3.JPG)
+
 
 
