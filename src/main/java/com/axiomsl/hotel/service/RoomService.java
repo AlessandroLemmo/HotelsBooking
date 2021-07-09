@@ -10,7 +10,7 @@ import java.util.List;
 public interface RoomService {
     /* Basic CRUD operations */
     List<Room> findAllByCriteria(String number, RoomType type, RoomDirection direction);
-    List<Room> findAllByCriteriaAndCity(String city, String name, String number, RoomType type, RoomDirection direction);
+    List<Room> findAllByCriteriaAndCity(String city, String name, Integer numBeds, RoomType type, RoomDirection direction);
     Room findOne(Long id);
     Room findByNumber(String number);
     Room save(Room room);

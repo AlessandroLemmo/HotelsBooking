@@ -13,6 +13,7 @@
     <spring:message code="room_hotel_address" var="roomHotelAddressLabel"/>
     <spring:message code="room_hotel_name_label" var="roomHotelNameLabel"/>
     <spring:message code="room_number_label" var="roomNumberLabel"/>
+    <spring:message code="room_number_beds" var="roomNumberBeds"/>
     <spring:message code="room_type_label" var="roomTypeLabel"/>
     <spring:message code="room_direction_label" var="roomDirectionLabel"/>
     <spring:message code="room_price_label" var="roomPriceLabel"/>
@@ -50,6 +51,10 @@
             <tr>
                 <td>${roomNumberLabel}</td>
                 <td>${room.number}</td>
+            </tr>
+            <tr>
+                <td>${roomNumberBeds}</td>
+                <td>${room.numBeds}</td>
             </tr>
             <tr>
                 <td>${roomTypeLabel}</td>

@@ -34,9 +34,9 @@ public class RoomServiceImpl implements RoomService {
     
     @Override
     @Transactional(readOnly=true)
-    public List<Room> findAllByCriteriaAndCity(String city, String name, String number, RoomType type, RoomDirection direction) {
+    public List<Room> findAllByCriteriaAndCity(String city, String name, Integer numBeds, RoomType type, RoomDirection direction) {
         //return roomRepository.findAllByCriteriaAndCity(city, number, type, direction);
-    	return roomRepository.findAll(Specifications.where(getSpecification2(city, name, number, type, direction)),
+    	return roomRepository.findAll(Specifications.where(getSpecification2(city, name, numBeds, type, direction)),
                 new Sort(Sort.Direction.ASC, "number"));
     }
 
@@ -73,7 +73,7 @@ public class RoomServiceImpl implements RoomService {
     }
     
     /* Generate criteria query2 */
-    private Specification<Room> getSpecification2(final String city, final String name, final String number, final RoomType type, final RoomDirection direction) {
+    private Specification<Room> getSpecification2(final String city, final String name, final Integer numBeds, final RoomType type, final RoomDirection direction) {
         return new Specification<Room>() {
             @Override
             public Predicate toPredicate(Root<Room> root, CriteriaQuery<?> criteriaQuery, CriteriaBuilder criteriaBuilder) {
@@ -89,9 +89,9 @@ public class RoomServiceImpl implements RoomService {
                     		name);
                     predicate = criteriaBuilder.and(predicate, p);
                 }
-                if (number != null && !number.isEmpty()) {
-                    Predicate p = criteriaBuilder.equal(root.get(Room_.number),
-                            number);
+                if (numBeds != null) {
+                    Predicate p = criteriaBuilder.equal(root.get(Room_.numBeds),
+                            numBeds);
                     predicate = criteriaBuilder.and(predicate, p);
                 }
                 if (type != null && !type.equals(RoomType.All)) {

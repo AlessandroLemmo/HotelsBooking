@@ -86,7 +86,7 @@ public class HotelController {
         		this.hotel = hotel;
         		searchRoom.setHotel(this.hotel);
         		rooms.addAll(roomService.findAllByCriteriaAndCity(searchRoom.getHotel().getCity(), searchRoom.getHotel().getName(),
-        				searchRoom.getNumber(), searchRoom.getType(), searchRoom.getDirection()));
+        				searchRoom.getNumBeds(), searchRoom.getType(), searchRoom.getDirection()));
         		//rooms.addAll(roomService.findAllByCriteria(searchRoom.getNumber(), searchRoom.getType(), searchRoom.getDirection()));
         	}
         	searchRoom.setHotel(insertHotel);

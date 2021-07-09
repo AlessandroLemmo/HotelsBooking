@@ -13,6 +13,7 @@
     <spring:message code="room_edit_title" var="roomEditTitle"/>
     <spring:message code="hotel_name_label" var="hotelNameLabel"/>
     <spring:message code="room_number_label" var="roomNumberLabel"/>
+    <spring:message code="room_number_beds" var="roomNumberBeds"/>
     <spring:message code="room_type_label" var="roomTypeLabel"/>
     <spring:message code="room_direction_label" var="roomDirectionLabel"/>
     <spring:message code="room_price_label" var="roomPriceLabel"/>
@@ -43,6 +44,13 @@
             </form:label>
             <form:input path="number" />
             <form:errors path="number" cssClass="error" />
+            <p/>
+            
+            <form:label path="numBeds">
+                ${roomNumberBeds}*
+            </form:label>
+            <form:input path="numBeds" />
+            <form:errors path="numBeds" cssClass="error" />
             <p/>
 
             <form:label path="type">

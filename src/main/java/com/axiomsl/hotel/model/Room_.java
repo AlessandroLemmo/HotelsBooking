@@ -16,6 +16,7 @@ public abstract class Room_ {
 	public static volatile SingularAttribute<Room, RoomType> type;
 	public static volatile SingularAttribute<Room, Integer> version;
 	public static volatile SingularAttribute<Room, RoomDirection> direction;
+	public static volatile SingularAttribute<Room, Integer> numBeds;
 
 }
 

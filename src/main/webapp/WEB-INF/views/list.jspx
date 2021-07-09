@@ -13,6 +13,7 @@
     <spring:message code="room_hotel_city" var="roomHotelCity"/>
     <spring:message code="room_hotel_address" var="roomHotelAddress"/>
     <spring:message code="room_number_label" var="roomNumberLabel"/>
+    <spring:message code="room_number_beds" var="roomNumberBeds"/>
     <spring:message code="room_type_label" var="roomTypeLabel"/>
     <spring:message code="room_direction_label" var="roomDirectionLabel"/>
     <spring:message code="room_price_label" var="roomPriceLabel"/>
@@ -33,7 +34,7 @@
                 <thead>
                 	<th>${roomHotelCity}</th>
                 	<th>${roomHotelNameLabel}</th>
-                    <th>${roomNumberLabel}</th>
+                    <th>${roomNumberBeds}</th>
                     <th>${roomTypeLabel}</th>
                     <th>${roomDirectionLabel}</th>
                     <th></th>
@@ -42,7 +43,7 @@
                     <tr>
                     	<td><form:input path="hotel.city"/></td>
                     	<td><form:input path="hotel.name"/></td>
-                        <td><form:input path="number" /></td>
+                        <td><form:input path="numBeds" /></td>
                         <!--<td><form:input path="type" /></td>-->
                         <td><form:select path="type" items="${types}"/></td>
                         <!--<td><form:input path="direction" /></td>-->
@@ -66,6 +67,7 @@
             <th>${roomHotelCity}</th>
             <!-- <th>${roomHotelAddress}</th>  -->
             <th>${roomNumberLabel}</th>
+            <th>${roomNumberBeds}</th>
             <th>${roomTypeLabel}</th>
             <th>${roomDirectionLabel}</th>         
             <!-- <th>${roomPriceLabel}</th> -->
@@ -77,6 +79,7 @@
                 	<td>${room.hotel.city}</td>
                 	<!-- <td>${room.hotel.address}</td> -->
                     <td><a href="${homeUrl}${room.id.toString()}">${room.number}</a></td>
+                    <td>${room.numBeds}</td>
                     <td>${room.type}</td>
                     <td>${room.direction}</td>
                     <!-- <td>${room.price}</td> -->

@@ -82,21 +82,22 @@ CREATE TABLE IF NOT EXISTS `rooms` (
   `room_type` enum('StandardRoom','SpecialRoom','ExclusiveRoom') COLLATE utf8_bin NOT NULL DEFAULT 'StandardRoom',
   `room_direction` enum('FRONT','BACK') COLLATE utf8_bin NOT NULL DEFAULT 'FRONT',
   `room_price` varchar(10) COLLATE utf8_bin NOT NULL,
+  `room_num_beds` int(3) NOT NULL,
   `room_version` int(11) NOT NULL,
   PRIMARY KEY (`room_id`),
   UNIQUE KEY `hotel_id` (`hotel_id`,`room_number`)
 ) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='Hotel Rooms (number, type and window direction)';
 
 
-INSERT INTO `rooms` (`room_id`, `hotel_id`, `room_number`, `room_type`, `room_direction`, `room_price`, `room_version`) VALUES
-(1, 1, '101', 'StandardRoom', 'FRONT', '50,00', 0),
-(2, 1, '102', 'SpecialRoom', 'BACK', '70,00', 0),
-(3, 1, '103', 'ExclusiveRoom', 'BACK', '90,00', 0),
-(4, 1, '104', 'ExclusiveRoom', 'FRONT', '90,00', 0),
-(5, 1, '105', 'StandardRoom', 'BACK', '50,00', 0),
-(6, 2, '121', 'ExclusiveRoom', 'FRONT', '90,00', 0),
-(7, 2, '122', 'ExclusiveRoom', 'BACK', '90,00', 0),
-(8, 2, '123', 'StandardRoom', 'FRONT', '50,00', 0);
+INSERT INTO `rooms` (`room_id`, `hotel_id`, `room_number`, `room_type`, `room_direction`, `room_price`, `room_num_beds`, `room_version`) VALUES
+(1, 1, '101', 'StandardRoom', 'FRONT', '50,00', 1, 0),
+(2, 1, '102', 'SpecialRoom', 'BACK', '70,00', 1, 0),
+(3, 1, '103', 'ExclusiveRoom', 'BACK', '90,00', 2, 0),
+(4, 1, '104', 'ExclusiveRoom', 'FRONT', '90,00', 2, 0),
+(5, 1, '105', 'StandardRoom', 'BACK', '50,00', 2, 0),
+(6, 2, '121', 'ExclusiveRoom', 'FRONT', '90,00', 1, 0),
+(7, 2, '122', 'ExclusiveRoom', 'BACK', '90,00', 3, 0),
+(8, 2, '123', 'StandardRoom', 'FRONT', '50,00', 2, 0);
 
 
 

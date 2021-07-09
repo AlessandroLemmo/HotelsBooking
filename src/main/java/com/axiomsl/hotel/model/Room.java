@@ -3,6 +3,7 @@ package com.axiomsl.hotel.model;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.HashSet;
 import java.util.Set;
@@ -22,6 +23,7 @@ public class Room {
     private RoomType type;
     private RoomDirection direction;
     private String price;
+    private Integer numBeds;
     private Hotel hotel;
     private Set<Reservation> reservations = new HashSet<Reservation>();
 
@@ -86,6 +88,16 @@ public class Room {
     
     public void setPrice(String price) {
     	this.price = price;
+    }
+    
+    @NotNull
+    @Column(name = "room_num_beds")
+    public Integer getNumBeds() {
+    	return numBeds;
+    }
+    
+    public void setNumBeds(Integer numBeds) {
+    	this.numBeds = numBeds;
     }
 
     @ManyToOne
